@@ -7,6 +7,11 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       UnityLoader.instantiate("unityContainer", "Build/WebGL.json");
+      function unityContainerHeightChange(){
+        var UnityContainer = document.getElementById('unityContainer');
+        UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
+        document.getElementById("viewport").setAttribute("content", "width="+ window.innerHeight +", initial-scale=0, maximum-scale=1.0, minimum-scale=0.25, user-scalable=yes");
+      }
     </script>
   </head>
   <body>
