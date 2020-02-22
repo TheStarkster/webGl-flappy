@@ -2,6 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Flappy Plane</title>
     <script src="Build/UnityLoader.js"></script>
@@ -11,6 +12,18 @@
         var UnityContainer = document.getElementById('unityContainer');
         UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
         // document.getElementById("viewport").setAttribute("content", "width="+ window.innerHeight +", initial-scale=0, maximum-scale=1.0, minimum-scale=0.25, user-scalable=yes");
+        resizeToMatchDisplaySize()
+      }
+      function resizeToMatchDisplaySize() {
+        var canvas = getElementById("canvas") == null ? resizeToMatchDisplaySize() : getElementById("canvas")
+        var displayWidth  = canvas.clientWidth  * window.devicePixelRatio;
+        var displayHeight = canvas.clientHeight * window.devicePixelRatio;
+        if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
+          canvas.width  = displayWidth;
+          canvas.height = displayHeight;
+          return true;
+        }
+        return false;
       }
     </script>
   </head>
