@@ -6,6 +6,7 @@
     <title>Unity WebGL Player | Flappy Plane</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
+      document.onload = unityContainerHeightChange();
       UnityLoader.instantiate("unityContainer", "Build/WebGL.json");
       function unityContainerHeightChange(){
         var UnityContainer = document.getElementById('unityContainer');
@@ -14,7 +15,7 @@
       }
     </script>
   </head>
-  <body onload="unityContainerHeightChange();">
+  <body>
     <div id="unityContainer"></div>
   </body>
 </html>
