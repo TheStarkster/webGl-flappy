@@ -10,11 +10,11 @@
       function unityContainerHeightChange(){
         var UnityContainer = document.getElementById('unityContainer');
         UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
-        document.getElementById("viewport").setAttribute("content", "width="+ window.innerHeight +", initial-scale=0, maximum-scale=1.0, minimum-scale=0.25, user-scalable=yes");
+        // document.getElementById("viewport").setAttribute("content", "width="+ window.innerHeight +", initial-scale=0, maximum-scale=1.0, minimum-scale=0.25, user-scalable=yes");
       }
     </script>
   </head>
-  <body>
-    <div id="unityContainer" style="width: 960px; height: 600px; margin: auto"></div>
+  <body onload="unityContainerHeightChange();">
+    <div id="unityContainer"></div>
   </body>
 </html>
