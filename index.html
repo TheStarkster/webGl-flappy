@@ -10,15 +10,16 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/FacebookExport.json", {onProgress: UnityProgress});
-      function unityContainerHeightChange(){
-        var UnityContainer = document.getElementById('gameContainer');
-        UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
-      }
     </script>
   </head>
-  <body onload="unityContainerHeightChange();">
+  <body>
     <div class="webgl-content">
-      <div id="gameContainer"></div>
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Flappy Plane</div>
+      </div>
     </div>
   </body>
 </html>
