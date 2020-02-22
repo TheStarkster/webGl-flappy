@@ -14,15 +14,15 @@
         var UnityContainer = document.getElementById('gameContainer');
         UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
       }
-      function resize_canvas(){
-        var canvas = document.getElementById("canvas");
-        canvas.width  = document.body.clientWidth;
-        canvas.height = document.body.clientHeight;
-      }
-      resize_canvas();
+      // function resize_canvas(){
+      //   var canvas = document.getElementById("canvas");
+      //   canvas.width  = document.body.clientWidth;
+      //   canvas.height = document.body.clientHeight;
+      // }
+      // resize_canvas();
     </script>
   </head>
-  <body class="template" onresize="resize_canvas()" onpageshow="resize_canvas()" onload="unityContainerHeightChange()">
+  <body class="template" onload="unityContainerHeightChange()">
     <div class="webgl-content">
       <div id="gameContainer"></div>
     </div>
