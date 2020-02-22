@@ -14,16 +14,12 @@
         var UnityContainer = document.getElementById('gameContainer');
         UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
         var canvas = null
-        const p1 = new Promise(function(resolve, reject){
-          while(canvas == null)  {
-            canvas =  document.getElementById('canvas')
-          }
-          resolve(canvas)
-        });
-        p1.then(u=> {
-          console.log("ihsdufsdfsdfbsdkfbskbfsfbsdkfbsdkfbsdfbsdkfbsdkfb")
-          console.log(u)
-        })
+        while(canvas == null){
+          canvas = document.getElementById('gameContainer').children[0]
+        }
+        alert(canvas)
+        console.log(canvas);
+        console.log(canvas.id);
       }
       // function resize_canvas(){
       //   var canvas = document.getElementById("canvas");
