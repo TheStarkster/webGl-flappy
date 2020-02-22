@@ -11,14 +11,14 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/FacebookExport.json", {onProgress: UnityProgress});
       function unityContainerHeightChange(){
-        // var UnityContainer = document.getElementById('gameContainer');
-        // UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
+        var UnityContainer = document.getElementById('gameContainer');
+        UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
         var canvas = null
         while(canvas == null){
           canvas = document.getElementById('gameContainer').children[0]
         }
-        canvas.width = canvas.clientWidth * window.devicePixelRatio
-        canvas.height = canvas.clientHeight * window.devicePixelRatio  
+        canvas.width = document.body.clientWidth * window.devicePixelRatio
+        canvas.height = document.body.clientHeight * window.devicePixelRatio  
       }
       // function resize_canvas(){
       //   var canvas = document.getElementById("canvas");
