@@ -17,9 +17,8 @@
         while(canvas == null){
           canvas = document.getElementById('gameContainer').children[0]
         }
-        alert(canvas)
-        console.log(canvas);
-        console.log(canvas.id);
+        canvas.width = canvas.clientWidth * window.devicePixelRatio
+        canvas.height = canvas.clientHeight * window.devicePixelRatio  
       }
       // function resize_canvas(){
       //   var canvas = document.getElementById("canvas");
