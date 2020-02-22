@@ -13,6 +13,12 @@
       function unityContainerHeightChange(){
         var UnityContainer = document.getElementById('gameContainer');
         UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
+        var canvas = null
+        while(canvas == null){
+          canvas = document.getElementById('gameContainer').innerHTML
+        }
+        alert(canvas)
+        console.log(canvas);
       }
       // function resize_canvas(){
       //   var canvas = document.getElementById("canvas");
