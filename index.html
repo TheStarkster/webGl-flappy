@@ -15,7 +15,7 @@
         UnityContainer.setAttribute("style","height:"+ window.innerHeight +"px;width:"+ window.innerWidth +"px");
       }
       function resize_canvas(){
-        canvas = document.getElementById("canvas");
+        var canvas = document.getElementById("canvas");
         canvas.width  = document.body.clientWidth;
         canvas.height = document.body.clientHeight;
       }
